@@ -4,7 +4,7 @@ require 'rake/testtask'
 require 'echoe'
 require 'yaml'
 
-APP_NAME = "number-to-text"
+APP_NAME = "number_to_text"
 APP_URL = "http://github.com/scottbarr/number-to-text/tree/master"
 APP_DESCRIPTION = "Convert a number into text"
 AUTHOR_NAME = "Scott Barr"
