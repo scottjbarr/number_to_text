@@ -1,3 +1,6 @@
+#
+# A Number class that is used to convert integers to text.
+#
 class Number
 
   ZERO = { 0 => "zero" }
@@ -68,13 +71,7 @@ class Number
     parts = []
     
     get_groups.each_pair do |name, value|
-      part = number_as_text(name, value).to_s
-
-      # if part.to_s.size > 0 && QUALIFIERS.include?(name.to_s)
-      #   part = part.concat("-" + QUALIFIERS[QUALIFIERS.index(name.to_s)])
-      # end
-      
-      parts << part
+      parts << number_as_text(name, value).to_s
     end
 
     parts_to_words(parts)
