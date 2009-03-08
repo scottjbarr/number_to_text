@@ -1,8 +1,13 @@
-=== Number to Text
+= Number to Text
 
-Convert a number into text.
+Convert an integer into text.
 
-==== License
+== Example
+
+  n = Number.new(119)
+  puts n.to_text # => "one-hundred-and-nineteen"
+
+== License
 
 (The MIT License)
 
