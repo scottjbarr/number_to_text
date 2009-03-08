@@ -30,63 +30,63 @@ class NumberTest < Test::Unit::TestCase
     n = Number.new(1)
     assert_equal 1, n.to_i
     assert_equal 1, n.hundreds
-    assert_equal "one", n.to_word
+    assert_equal "one", n.to_text
   end
   
   def test_ten
     n = Number.new(10)
     assert_equal 10, n.to_i
     assert_equal 10, n.hundreds
-    assert_equal "ten", n.to_word
+    assert_equal "ten", n.to_text
   end
   
   def test_one_hundred
     n = Number.new(100)
     assert_equal 100, n.to_i
     assert_equal 100, n.hundreds
-    assert_equal "one-hundred", n.to_word
+    assert_equal "one-hundred", n.to_text
   end
   
   def test_ninety_eight
     n = Number.new(98)
     assert_equal 98, n.to_i
     assert_equal 98, n.hundreds
-    assert_equal "ninety-eight", n.to_word
+    assert_equal "ninety-eight", n.to_text
   end
 
   def test_nine_hundred_and_eighty_seven
     n = Number.new(987)
     assert_equal 987, n.to_i
     assert_equal 987, n.hundreds
-    assert_equal "nine-hundred-and-eighty-seven", n.to_word
+    assert_equal "nine-hundred-and-eighty-seven", n.to_text
   end
   
   def test_nineteen
     n = Number.new(19)
     assert_equal 19, n.to_i
     assert_equal 19, n.hundreds
-    assert_equal "nineteen", n.to_word
+    assert_equal "nineteen", n.to_text
   end
   
   def test_one_hundred_and_nineteen
     n = Number.new(119)
     assert_equal 119, n.to_i
     assert_equal 119, n.hundreds
-    assert_equal "one-hundred-and-nineteen", n.to_word
+    assert_equal "one-hundred-and-nineteen", n.to_text
   end
   
   def test_two_hundred_and_one
     n = Number.new(201)
     assert_equal 201, n.to_i
     assert_equal 201, n.hundreds
-    assert_equal "two-hundred-and-one", n.to_word
+    assert_equal "two-hundred-and-one", n.to_text
   end
   
   def test_one_hundred_and_ninety
     n = Number.new(190)
     assert_equal 190, n.to_i
     assert_equal 190, n.hundreds
-    assert_equal "one-hundred-and-ninety", n.to_word
+    assert_equal "one-hundred-and-ninety", n.to_text
   end
 
   def test_one_thousand
@@ -94,7 +94,7 @@ class NumberTest < Test::Unit::TestCase
     assert_equal 1000, n.to_i
     assert_equal 1, n.thousands
     assert_equal 0, n.hundreds
-    assert_equal "one-thousand", n.to_word
+    assert_equal "one-thousand", n.to_text
   end
   
   def test_one_thousand_and_one
@@ -102,7 +102,7 @@ class NumberTest < Test::Unit::TestCase
     assert_equal 1001, n.to_i
     assert_equal 1, n.thousands
     assert_equal 1, n.hundreds
-    assert_equal "one-thousand-and-one", n.to_word
+    assert_equal "one-thousand-and-one", n.to_text
   end
   
   def test_one_hundred_thousand_and_one
@@ -110,7 +110,7 @@ class NumberTest < Test::Unit::TestCase
     assert_equal 100001, n.to_i
     assert_equal 100, n.thousands
     assert_equal 1, n.hundreds
-    assert_equal "one-hundred-thousand-and-one", n.to_word
+    assert_equal "one-hundred-thousand-and-one", n.to_text
   end
   
   def test_one_million_and_one
@@ -119,7 +119,7 @@ class NumberTest < Test::Unit::TestCase
     assert_equal 1, n.millions
     assert_equal 0, n.thousands
     assert_equal 1, n.hundreds
-    assert_equal "one-million-and-one", n.to_word
+    assert_equal "one-million-and-one", n.to_text
   end
   
   def test_one_billion_and_one
@@ -129,7 +129,7 @@ class NumberTest < Test::Unit::TestCase
     assert_equal 0, n.millions
     assert_equal 0, n.thousands
     assert_equal 1, n.hundreds
-    assert_equal "one-billion-and-one", n.to_word
+    assert_equal "one-billion-and-one", n.to_text
   end
   
   def test_one_trillion_and_one
@@ -140,7 +140,7 @@ class NumberTest < Test::Unit::TestCase
     assert_equal 0, n.millions
     assert_equal 0, n.thousands
     assert_equal 1, n.hundreds
-    assert_equal "one-trillion-and-one", n.to_word
+    assert_equal "one-trillion-and-one", n.to_text
   end
   
   def test_one_trillion_two_hundred_and_thirty_four_billion
@@ -153,7 +153,7 @@ class NumberTest < Test::Unit::TestCase
     assert_equal 219, n.hundreds
     
     expected = "one-trillion-two-hundred-and-thirty-four-billion-five-hundred-and-sixty-seven-million-eight-hundred-and-ninety-one-thousand-and-two-hundred-and-nineteen"
-    assert_equal expected, n.to_word
+    assert_equal expected, n.to_text
   end
   
 end

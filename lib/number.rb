@@ -61,7 +61,7 @@ class Number
     @s
   end
 
-  def to_word
+  def to_text
     return "zero" if self.zero?
     return BASIC[@i] if BASIC.include?(@i)
 
