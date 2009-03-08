@@ -1,0 +1,7 @@
+config.yml
+init.rb
+Rakefile
+README.rdoc
+test/test_helper.rb
+test/unit/number_to_text_test.rb
+Manifest
