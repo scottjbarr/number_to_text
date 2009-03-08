@@ -93,19 +93,18 @@ class Number
       if part.size > 0
         
         if i < 4
-          word = word.concat(part + "-" + QUALIFIERS[i])
+          word = word.concat(part + "-" + QUALIFIERS[i] + "-")
         else
           if word.size > 0
-            word = word.concat("-and-" + part)
+            word = word.concat("and-#{part}-")
           else
-            word = word.concat(part)
+            word = word.concat("#{part}-")
           end
         end
-        
       end
     end
     
-    word
+    word.gsub(/-$/, '')
   end
   
   def zero?

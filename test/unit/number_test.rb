@@ -143,4 +143,17 @@ class NumberTest < Test::Unit::TestCase
     assert_equal "one-trillion-and-one", n.to_word
   end
   
+  def test_one_trillion_two_hundred_and_thirty_four_billion
+    n = Number.new(1234567891219)
+    assert_equal 1234567891219, n.to_i
+    assert_equal 1, n.trillions
+    assert_equal 234, n.billions
+    assert_equal 567, n.millions
+    assert_equal 891, n.thousands
+    assert_equal 219, n.hundreds
+    
+    expected = "one-trillion-two-hundred-and-thirty-four-billion-five-hundred-and-sixty-seven-million-eight-hundred-and-ninety-one-thousand-and-two-hundred-and-nineteen"
+    assert_equal expected, n.to_word
+  end
+  
 end
